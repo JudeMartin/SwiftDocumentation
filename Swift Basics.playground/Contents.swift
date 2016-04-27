@@ -91,3 +91,39 @@ print(firstName,lastName!)
 /* print the number of character's in the string, Force unwrap it and then builder { character and count } */
 print(lastName!.characters.count)
 
+
+/* declare an array of Int */
+let count = 10
+var squares = [Int]()
+/* appned to the array */
+for index in 0..<count{
+    squares.append(index * index)
+}
+print(squares)
+
+/* collection of fruits */
+/* for in loop */
+let fruits = ["lemon","banana","apple","mango"]
+for fruit in fruits{
+    if fruit == "mango"{
+        print("Yay, it's a \(fruit)!")
+    }
+}
+
+/* while loop */
+let newCount = 10
+var newSquares = [Int]()
+var newIndex = 0
+while index < count{
+    squares.append(index * index)
+    index++
+}
+print(squares)
+
+/* do while == repeat while */
+var latestIndex = 0
+repeat {
+    print("index is  \(latestIndex)")
+    latestIndex++
+}
+while latestIndex < 3
