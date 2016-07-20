@@ -129,7 +129,7 @@ repeat {
 while latestIndex < 3
 
 
-/* labelled Loop */
+/* Dictionary */
 let interestingNumbers = [
     "Prime" : [2,3,5,7,11,13],
     "Fibonacci" : [1,1,2,3,5,8],
@@ -144,8 +144,48 @@ for(kind, numbers) in interestingNumbers {
     }
 }
 print("The largest number is \(largest) in the Dictionary" )
+
 var total = 0
 for i in 0...4 {
     total += i
 }
 print(total)
+
+func greet(person: String, day: String, date:Int,month: String) -> String{
+  return "Hello \(person), today is \(day) the \(date)th of \(month)"
+}
+print(greet("Jude", day: "Tuesday", date:19, month:"July"))
+
+class Shape {
+    var numberOfSides = 0
+    func simpleDescription() -> String {
+        return "A shape with \(numberOfSides) sides."
+    }
+    
+}
+/* collections */
+    // Arrays
+var someInts = [Int]()
+print("someInts is of type [Int] with a count of \(someInts.count) items.")
+someInts.append(3)
+print("someInts is of type [Int] with a count of \(someInts.count) items.")
+var shoppingList: [String] = ["Eggs","Milk","Jam"]
+print(shoppingList)
+var shortHandShoppingList = ["Eggs","Milk"]
+print(shortHandShoppingList)
+if shortHandShoppingList.isEmpty {
+    print("The shopping list is empty")
+} else {
+    print("The Shopping list is not empty")
+}
+// one way of adding elements to the Array
+shortHandShoppingList.append("Butter")
+// another way of adding elements to the array
+shortHandShoppingList += ["Bread","Juice"]
+print(shortHandShoppingList)
+// insert at specified index
+shoppingList.insert("cereal", atIndex: 0)
+print(shoppingList)
+//remove at specified index
+shoppingList.removeAtIndex(0)
+print(shoppingList)
