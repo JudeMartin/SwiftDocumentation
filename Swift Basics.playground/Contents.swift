@@ -164,7 +164,7 @@ class Shape {
     
 }
 /* collections */
-    // Arrays
+    /* Arrays */
 var someInts = [Int]()
 print("someInts is of type [Int] with a count of \(someInts.count) items.")
 someInts.append(3)
@@ -189,3 +189,31 @@ print(shoppingList)
 //remove at specified index
 shoppingList.removeAtIndex(0)
 print(shoppingList)
+// print all the elements in the list
+for item in shoppingList {
+    print(item)
+}
+    /* Set */
+var favoriteGenres: Set = ["Heavy Metal","Rock","Pop","Acoustic"]
+for genres in favoriteGenres.sort(){
+    print(genres) // individually print the collection by iteration
+}
+print(favoriteGenres) // print the whole collection at once
+//fundamental operations set: union, intersection, subtracting, symmetricDifference
+
+let oddDigits: Set = [1,3,5,7,9]
+let evenDigits: Set = [2,4,6,8,10]
+let singleDigitPrimeNumbers: Set = [2,3,5,7]
+
+print(oddDigits.union(evenDigits).sort())
+print(oddDigits.intersect(singleDigitPrimeNumbers).sort())
+print(oddDigits.subtract(singleDigitPrimeNumbers).sort())
+//print(oddDigits.symmetricDifference(singleDigitPrimeNumbers).sorted())
+
+let houseAnimals: Set = ["🐶", "🐱"]
+let farmAnimals: Set = ["🐮", "🐔", "🐑", "🐶", "🐱"]
+let cityAnimals: Set = ["🐦", "🐭"]
+
+print(houseAnimals.isSubsetOf(farmAnimals))
+print(farmAnimals.isDisjointWith(houseAnimals))
+print(houseAnimals.isDisjointWith(cityAnimals))
