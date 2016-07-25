@@ -227,5 +227,26 @@ for airportCode in airports.keys { // get all the keys of the Dictionary
 for airportName in airports.values { // get all the values of the dictionary
     print("The values in the dictionary are: \(airportName) ")
 }
-
-
+// Classes and Methods
+class Counter {
+    var counter = 0
+    func inc() {
+        counter += 1
+    }
+    func printCount() {
+        print("The value of the counter \(counter)")
+    }
+    func add(n: Int) {
+        counter += n;
+    }
+    func reset() {
+        counter = 0
+    }
+}
+var myCount = Counter()
+myCount.printCount()
+myCount.inc()
+myCount.add(n: 9)
+myCount.printCount()
+myCount.reset()
+myCount.printCount()
